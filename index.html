@@ -6,13 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CoolQuest</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #063a28;
+      background-image: url('your-pattern.svg');
+      /* Add a subtle pattern SVG or PNG */
+      background-repeat: repeat;
+    }
+  </style>
+
 </head>
 
 <body class="bg-green-900 text-white font-sans">
 
+
   <!-- Navbar -->
   <nav class="flex justify-between items-center p-4 bg-green-800">
-    <div class="text-2xl font-bold text-green-300">Cool<span class="text-yellow-300">Quest</span></div>
+    <div class="text-2xl font-bold text-green-300">
+      Cool<span class="text-yellow-300">Quest</span>
+    </div>
     <ul class="flex gap-6 text-white">
       <li>About Us</li>
       <li>Services</li>
@@ -23,43 +36,82 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="flex flex-wrap md:flex-nowrap p-10 gap-10 items-center">
+  <section class="flex flex-wrap md:flex-nowrap p-10 gap-10 items-center bg-green-900 text-white">
+    <!-- Left Content -->
     <div class="flex-1 space-y-6">
-      <h1 class="text-4xl font-bold">Reliable HVAC for Every Season</h1>
-      <ul class="space-y-2 text-lg">
+      <!-- Heading -->
+      <div class="border-2 border-yellow-500 p-4 inline-block">
+        <h1 class="text-4xl font-bold leading-tight">
+          Reliable HVAC for <br />Every Season
+        </h1>
+      </div>
+
+      <!-- Features -->
+      <ul class="space-y-2 text-lg mt-4">
         <li>✅ Certified & Experienced Technicians</li>
         <li>✅ Fast, Reliable Service</li>
         <li>✅ Transparent, Affordable Pricing</li>
       </ul>
 
-      <!-- Form -->
+      <!-- Contact Form -->
       <form class="bg-white p-6 rounded-lg shadow-md text-black space-y-4 max-w-md">
-        <input type="text" placeholder="Name" class="w-full border p-2 rounded" />
-        <input type="tel" placeholder="Phone" class="w-full border p-2 rounded" />
-        <select class="w-full border p-2 rounded">
-          <option>Select Service</option>
-          <option>AC Installation</option>
-          <option>Maintenance</option>
-        </select>
-        <button type="submit" class="bg-green-600 text-white w-full py-2 rounded">Submit</button>
+        <div class="flex gap-2">
+          <input type="text" placeholder="Name" class="w-1/2 border p-2 rounded" />
+          <input type="tel" placeholder="Phone" class="w-1/2 border p-2 rounded" />
+        </div>
+        <div class="flex gap-2">
+          <select class="w-1/2 border p-2 rounded">
+            <option>Select Service</option>
+            <option>AC Installation</option>
+            <option>Maintenance</option>
+          </select>
+          <button type="submit" class="w-1/2 bg-green-700 text-white py-2 rounded">Submit</button>
+        </div>
       </form>
 
-      <div class="text-sm pt-2">Certified Installer: <span class="font-bold">GAF, LENNOX, American Standard</span></div>
+      <!-- Certified Installer -->
+      <div class="text-sm tracking-wide pt-2">
+        <span class="opacity-70">Certified Installer:</span>
+        <span class="ml-2 font-semibold text-white">GAF</span>,
+        <span class="font-semibold text-white">LENNOX</span>,
+        <span class="font-semibold text-white">American Standard</span>
+      </div>
     </div>
 
-    <!-- Technician Card -->
-    <div class="flex-1 flex flex-col items-center space-y-4">
-      <div class="relative w-64 h-80 bg-white text-black rounded-xl overflow-hidden shadow-lg">
-        <div class="absolute top-2 right-2 bg-yellow-300 px-2 py-1 rounded-full text-xs font-semibold">5 Years Warranty
+    <!-- Right Technician Content -->
+    <div class="flex-1 flex flex-col items-center space-y-6 relative">
+      <!-- Technician Section -->
+      <div class="relative w-72 h-[360px]">
+        <!-- White circular background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white rounded-full z-0">
         </div>
-        <img src="pic/pp1.png" alt="Technician" class="w-full h-48 object-cover" />
-        <div class="p-4 text-center">
-          <div class="text-xl font-bold">C20-987654</div>
-          <div class="text-yellow-500 mt-1">★ 4.8 (598)</div>
+
+        <!-- Warranty badge image -->
+        <img src="pic/badge.png" alt="5 Years Warranty Badge"
+          class="absolute left-[-60px] top-12 w-28 h-28 object-contain z-20" />
+
+        <!-- Technician image -->
+        <img src="pic/p1.png" alt="Technician" class="relative z-10 w-full h-auto object-contain" />
+
+        <!-- Technician ID box -->
+        <div
+          class="absolute top-10 right-2 bg-white text-black text-sm font-semibold px-4 py-2 rounded-xl shadow z-20 flex items-center gap-1">
+          <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 11c0 1.657-1.343 3-3 3s-3-1.343-3-3m6 0a3 3 0 11-6 0 3 3 0 016 0zm6 8h-6a6 6 0 00-6 6H6a6 6 0 00-6-6V6a6 6 0 006-6h12a6 6 0 016 6v13a6 6 0 00-6 6z" />
+          </svg>
+          C20-987654
+        </div>
+
+        <!-- Google rating -->
+        <div
+          class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white px-4 py-1 rounded-full text-yellow-500 font-semibold shadow z-20 flex items-center gap-2">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="w-4 h-4" />
+          4.8 (698)
         </div>
       </div>
 
-      <!-- Images Section -->
+      <!-- Work Preview Images -->
       <div class="flex gap-4">
         <div class="w-32 h-20 bg-white rounded overflow-hidden relative">
           <img src="pic/p2.jpg" alt="Work" class="w-full h-full object-cover" />
@@ -74,6 +126,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Reviews Section -->
   <section class="bg-white text-black py-12 px-6">
@@ -232,7 +285,7 @@
       <!-- Offer Box -->
       <div class="bg-green-600 text-white rounded-xl p-8 flex-1">
         <div class="relative">
-          <img src="pic/offer.jpg" alt="Offer" class="w-full h-80 object-cover rounded-lg opacity-60">
+          <img src="pic/offer.jpg" alt="Offer" class="w-full h-72 object-cover rounded-lg opacity-60">
           <div class="absolute top-6 left-6 bg-white text-green-800 font-semibold px-4 py-1 rounded">Hot Offer</div>
           <div class="absolute bottom-6 left-6 pr-10">
             <h3 class="text-2xl font-bold mb-2">Get $500 OFF New HVAC System Installation!</h3>
@@ -256,34 +309,272 @@
 
       <!-- Step 1 -->
       <div class="bg-green-50 border border-green-100 rounded-xl p-2 text-center shadow-sm">
-        <img src="pic/consultation.jpg" alt="Consultation" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="pic/consultation.jpg" alt="Consultation" class="w-full h-52 object-cover rounded-md mb-4">
         <div class="text-green-700 font-semibold mb-2">Schedule a Consultation</div>
         <p class="text-sm text-gray-600">Contact us to book your free consultation with our HVAC experts.</p>
       </div>
 
       <!-- Step 2 -->
       <div class="bg-green-50 border border-green-100 rounded-xl p-2 text-center shadow-sm">
-        <img src="pic/quote.jpg" alt="Quote" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="pic/quote.jpg" alt="Quote" class="w-full h-52 object-cover rounded-md mb-4">
         <div class="text-green-700 font-semibold mb-2">Get a Custom Quote</div>
         <p class="text-sm text-gray-600">We assess your needs and provide a clear, no-obligation quote.</p>
       </div>
 
       <!-- Step 3 -->
       <div class="bg-green-50 border border-green-100 rounded-xl p-2 text-center shadow-sm">
-        <img src="pic/installation.jpg" alt="Installation" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="pic/installation.jpg" alt="Installation" class="w-full h-52 object-cover rounded-md mb-4">
         <div class="text-green-700 font-semibold mb-2">Professional Installation</div>
         <p class="text-sm text-gray-600">Our certified team installs your system with precision and care.</p>
       </div>
 
       <!-- Step 4 -->
       <div class="bg-green-50 border border-green-100 rounded-xl p-2 text-center shadow-sm">
-        <img src="pic/comfort.jpg" alt="Comfort" class="w-full h-40 object-cover rounded-md mb-4">
+        <img src="pic/comfort.jpg" alt="Comfort" class="w-full h-52 object-cover rounded-md mb-4">
         <div class="text-green-700 font-semibold mb-2">Enjoy Total Comfort</div>
         <p class="text-sm text-gray-600">Experience efficient heating and cooling all year round.</p>
       </div>
 
     </div>
   </section>
+
+
+
+  <!-- Services Section -->
+  <section class="bg-white py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Our HVAC Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <!-- Service 1 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden text-center">
+        <img src="pic/ac.jpg" alt="AC Installation" class="w-full h-100 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-lg mb-2">Air Conditioner Installation</h3>
+          <p class="text-sm text-gray-600 mb-4">Stay cool all summer with fast, professional AC installations built to
+            last.</p>
+          <a href="#" class="inline-block bg-green-800 text-white px-4 py-2 rounded">Explore Service</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden text-center">
+        <img src="pic/heating.jpg" alt="Heating Repair" class="w-full h-100 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-lg mb-2">Heating System Repair</h3>
+          <p class="text-sm text-gray-600 mb-4">Keep your home warm and safe with expert repair services for any heating
+            system.</p>
+          <a href="#" class="inline-block bg-green-800 text-white px-4 py-2 rounded">Explore Service</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden text-center">
+        <img src="pic/air-quality.jpg" alt="Air Quality" class="w-full h-100 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-lg mb-2">Indoor Air Quality Solutions</h3>
+          <p class="text-sm text-gray-600 mb-4">Breathe cleaner, healthier air with advanced filtration and ventilation
+            systems.</p>
+          <a href="#" class="inline-block bg-green-800 text-white px-4 py-2 rounded">Explore Service</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="bg-gray-50 py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Meet the People Behind the Work</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+
+      <!-- Team Image -->
+      <div class="md:col-span-1">
+        <img src="pic/team.jpg" alt="Team" class="w-full h-full rounded-xl object-cover">
+      </div>
+
+      <!-- Team Quote 1 -->
+      <div class="bg-white border rounded-xl p-6 shadow-sm text-center">
+        <p class="text-gray-600 italic mb-4">“My mission is simple — to give every homeowner reliable, efficient comfort
+          they can count on, every day.”</p>
+        <div class="font-bold text-green-800">James Carter</div>
+        <div class="text-sm text-gray-500">Founder & Senior HVAC Specialist</div>
+      </div>
+
+      <!-- Team Quote 2 -->
+      <div class="bg-white border rounded-xl p-6 shadow-sm text-center">
+        <p class="text-gray-600 italic mb-4">“I’m here to ensure every project runs smoothly and every customer feels
+          heard, respected, and happy with our work.”</p>
+        <div class="font-bold text-green-800">Michael Torres</div>
+        <div class="text-sm text-gray-500">Operations Manager & Customer Care Lead</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HVAC Insights Section -->
+  <section class="bg-white py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">HVAC Insights</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <!-- Article Card -->
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="pic/ac-maintenance.jpg" alt="AC Maintenance" class="rounded-xl h-60 w-full object-cover mb-4">
+        <p class="text-sm text-gray-500 mb-1">25 Apr 2025</p>
+        <h3 class="font-semibold text-md text-gray-900 mb-3">5 Signs Your AC Needs Maintenance</h3>
+        <a href="#" class="text-green-800 font-semibold">Read More</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="pic/heating-bills.jpg" alt="Save Heating Bills" class="rounded-xl h-60 w-full object-cover mb-4">
+        <p class="text-sm text-gray-500 mb-1">22 Apr 2025</p>
+        <h3 class="font-semibold text-md text-gray-900 mb-3">How to Save on Heating Bills This Winter</h3>
+        <a href="#" class="text-green-800 font-semibold">Read More</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="pic/thermostat.jpg" alt="Thermostat Settings" class="rounded-xl h-60 w-full object-cover mb-4">
+        <p class="text-sm text-gray-500 mb-1">22 Apr 2025</p>
+        <h3 class="font-semibold text-md text-gray-900 mb-3">The Best Thermostat Settings for Comfort & Efficiency</h3>
+        <a href="#" class="text-green-800 font-semibold">Read More</a>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+  <!-- Areas We Serve Section -->
+  <section class="bg-gray-50 py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Areas We Serve</h2>
+
+    <div class="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+      <!-- Example of one city -->
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3zM12 13c-2.761 0-5 2.239-5 5v1h10v-1c0-2.761-2.239-5-5-5z" />
+        </svg>
+        Los Angeles
+      </span>
+
+      <!-- Repeat for other cities -->
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">San
+        Diego</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">San
+        Jose</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">San
+        Francisco</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Sacramento</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Phoenix</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Las
+        Vegas</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Denver</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Kansas
+        City</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Charlotte</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">San
+        Antonio</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Atlanta</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Jacksonville</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Indianapolis</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Raleigh</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Chicago</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Tampa</span>
+      <span
+        class="flex items-center gap-2 border border-green-700 text-green-700 px-4 py-2 rounded-full text-sm font-medium">Orlando</span>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-green-900 text-white pt-10 px-6">
+    <!-- CTA Section -->
+    <div
+      class="bg-white text-green-900 rounded-xl max-w-5xl mx-auto p-6 flex flex-col md:flex-row justify-between items-center mb-10">
+      <h3 class="text-lg font-medium mb-4 md:mb-0">Let us help you choose the perfect system for your home.</h3>
+      <a href="#" class="bg-green-800 text-white px-5 py-2 rounded-md font-semibold shadow">Free HVAC Estimate</a>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10">
+      <!-- Logo and Description -->
+      <div>
+        <h4 class="text-2xl font-semibold mb-2">CoolQuest</h4>
+        <p class="text-sm mb-4">Trusted local HVAC experts delivering reliable heating and cooling solutions.</p>
+        <div class="flex space-x-4">
+          <a href="#" aria-label="Facebook">
+            <svg class="w-5 h-5 fill-white hover:fill-gray-300" viewBox="0 0 24 24">
+              <path
+                d="M22 12A10 10 0 1 0 12 22v-7h-2v-3h2v-2c0-2.2 1.2-3.5 3.3-3.5.7 0 1.5.1 1.5.1v2h-.8c-.8 0-1.2.5-1.2 1.1v1.3h2.4l-.4 3h-2v7a10 10 0 0 0 8-10z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg class="w-5 h-5 fill-white hover:fill-gray-300" viewBox="0 0 24 24">
+              <path
+                d="M8 19c7.5 0 11.6-6.2 11.6-11.6v-.5A8.4 8.4 0 0 0 22 5.3a8.3 8.3 0 0 1-2.4.7 4.2 4.2 0 0 0 1.8-2.3 8.3 8.3 0 0 1-2.7 1 4.2 4.2 0 0 0-7.2 3.8A11.9 11.9 0 0 1 3.1 4.7a4.2 4.2 0 0 0 1.3 5.6 4.1 4.1 0 0 1-1.9-.5v.1a4.2 4.2 0 0 0 3.4 4.1 4.2 4.2 0 0 1-1.9.1 4.2 4.2 0 0 0 4 3 8.4 8.4 0 0 1-6.2 1.7A11.8 11.8 0 0 0 8 19z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg class="w-5 h-5 fill-white hover:fill-gray-300" viewBox="0 0 24 24">
+              <path
+                d="M4 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm1 5H3v11h2V9zm4 0H7v11h2v-6c0-1.1.9-2 2-2s2 .9 2 2v6h2v-6c0-2.2-1.8-4-4-4s-4 1.8-4 4v6h2V9z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h5 class="font-semibold text-lg mb-3">Quick links</h5>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-gray-300">Home</a></li>
+          <li><a href="#" class="hover:text-gray-300">Services</a></li>
+          <li><a href="#" class="hover:text-gray-300">About</a></li>
+          <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+          <li><a href="#" class="hover:text-gray-300">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-1">
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2">
+            📞 <span>(555) 123-4567</span>
+          </li>
+          <li class="flex items-start gap-2">
+            📧 <span>mail.coolquest.com</span>
+          </li>
+          <li class="flex items-start gap-2">
+            📍 <span>1234 Maplewood Drive, Houston, TX 77002, United States</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-green-800 pt-4 pb-6 text-center text-sm text-white">
+      © 2025 all rights reserved
+    </div>
+  </footer>
+
+
+
 
 
 
